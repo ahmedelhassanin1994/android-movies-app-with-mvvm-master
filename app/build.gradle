@@ -126,7 +126,7 @@ dependencies {
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 
     // arrow
-    
+
     implementation("io.arrow-kt:arrow-optics:1.0.1")
     implementation(platform("io.arrow-kt:arrow-stack:1.0.1"))
 

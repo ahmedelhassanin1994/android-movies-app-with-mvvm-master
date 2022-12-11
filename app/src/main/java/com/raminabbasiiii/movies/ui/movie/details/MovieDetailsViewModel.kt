@@ -2,7 +2,6 @@ package com.raminabbasiiii.movies.ui.movie.details
 
 import android.util.Log
 import androidx.lifecycle.*
-import arrow.fx.coroutines.Schedule.Companion.collect
 import com.example.room.domain.usecase.InputData
 import com.example.room.domain.usecase.MovieDetails_UseCase
 import com.raminabbasiiii.movies.domain.entities.MovieDetails
