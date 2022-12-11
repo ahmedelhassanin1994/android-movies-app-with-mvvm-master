@@ -1,11 +1,12 @@
-package com.raminabbasiiii.movies.repository
+package com.raminabbasiiii.movies.data.data_source
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import androidx.paging.PagingSource.LoadResult.Page
+import com.raminabbasiiii.movies.data.mapper.toMovie
 import com.raminabbasiiii.movies.data.network.Api
-import com.raminabbasiiii.movies.data.network.toMovie
-import com.raminabbasiiii.movies.model.Movie
+import com.raminabbasiiii.movies.data.responeses.MovieDto
+import com.raminabbasiiii.movies.domain.entities.Movie
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
@@ -31,6 +32,7 @@ constructor(
             val page = params.key ?: 1
 
             val response = api.getAllMovies(page).data.map { it.toMovie() }
+
             Page (
                 data = response,
                 prevKey = null,

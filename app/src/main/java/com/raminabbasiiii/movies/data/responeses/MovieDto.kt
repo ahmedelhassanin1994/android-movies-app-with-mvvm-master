@@ -1,8 +1,6 @@
-package com.raminabbasiiii.movies.data.network
+package com.raminabbasiiii.movies.data.responeses
 
 import com.google.gson.annotations.SerializedName
-import com.raminabbasiiii.movies.model.Movie
-import com.raminabbasiiii.movies.model.MovieDetails
 
 class MovieDto(
 
@@ -58,40 +56,7 @@ class MovieDto(
     val images: List<String>? = null
 )
 
-    fun MovieDto.toMovie(): Movie {
-        return Movie(
-            id = id,
-            title = title,
-            poster = poster,
-            year = year,
-            country = country,
-            rating = rating,
-            genres = genres,
-            images = images
-        )
-    }
 
-    fun MovieDto.toMovieDetails(): MovieDetails {
-        return MovieDetails(
-            id = id,
-            title = title,
-            poster = poster,
-            year = year,
-            country = country,
-            rating = rating,
-            rated = rated,
-            released = released,
-            runtime = runtime,
-            director = director,
-            writer = writer,
-            actors = actors,
-            plot = plot,
-            awards = awards,
-            votes = votes,
-            genres = genres,
-            images = images
-        )
-    }
 
 
 

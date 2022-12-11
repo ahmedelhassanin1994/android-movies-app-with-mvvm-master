@@ -1,10 +1,15 @@
 package com.raminabbasiiii.movies.di
 
+import com.example.room.domain.usecase.MovieDetails_UseCase
+import com.example.room.domain.usecase.Movies_UseCase
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.raminabbasiiii.movies.data.data_source.RemoteDataSource
+import com.raminabbasiiii.movies.data.data_source.RemoteDataSourceImplementer
 import com.raminabbasiiii.movies.data.network.Api
-import com.raminabbasiiii.movies.repository.MovieRepository
-import com.raminabbasiiii.movies.repository.MovieRepositoryImpl
+import com.raminabbasiiii.movies.domain.repository.Repository
+import com.raminabbasiiii.movies.data.repository.MovieRepositoryImpl
+import com.raminabbasiiii.movies.ui.movie.details.MovieDetailsViewModel
 import com.raminabbasiiii.movies.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -43,9 +48,35 @@ object AppModule {
 
     @Singleton
     @Provides
+    fun provideRemoteDataSource(api: Api
+    ) = RemoteDataSourceImplementer(api) as RemoteDataSource
+
+
+    @Singleton
+    @Provides
     fun provideMovieRepository(
-        api: Api
-    ) = MovieRepositoryImpl(api) as MovieRepository
+        remoteDataSource: RemoteDataSource
+    ) = MovieRepositoryImpl(remoteDataSource) as Repository
+
+
+    @Singleton
+    @Provides
+    fun provideMovieDetails_Usecase(
+        repository: Repository
+    ) = MovieDetails_UseCase(repository)
+
+    @Singleton
+    @Provides
+    fun provideMovies_Usecase(
+        repository: Repository
+    ) = Movies_UseCase(repository)
+
+
+//    @Singleton
+//    @Provides
+//    fun provideViewModel(
+//        useCase: MovieDetails_UseCase
+//    ) = MovieDetailsViewModel(useCase)
 
     /*@Singleton
     @Provides

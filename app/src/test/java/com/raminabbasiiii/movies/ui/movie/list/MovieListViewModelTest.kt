@@ -7,8 +7,8 @@ import androidx.lifecycle.Observer
 import androidx.paging.PagingData
 import com.raminabbasiiii.movies.MainCoroutinesRule
 import com.raminabbasiiii.movies.getOrAwaitValueTest
-import com.raminabbasiiii.movies.model.Movie
-import com.raminabbasiiii.movies.repository.MovieRepository
+import com.raminabbasiiii.movies.domain.entities.Movie
+import com.raminabbasiiii.movies.domain.repository.Repository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.*
@@ -41,7 +41,7 @@ class MovieListViewModelTest {
     val res : LiveData<PagingData<Movie>> = _res
 
     @Mock
-    lateinit var repository: MovieRepository
+    lateinit var repository: Repository
 
     @Mock
     lateinit var movieListResponseObserver: Observer<PagingData<Movie>>

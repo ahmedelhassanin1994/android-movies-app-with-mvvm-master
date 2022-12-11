@@ -19,7 +19,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import com.raminabbasiiii.movies.model.Movie
+import com.raminabbasiiii.movies.domain.entities.Movie
 import com.raminabbasiiii.movies.AndroidMainCoroutinesRule
 import com.raminabbasiiii.movies.ui.movie.details.MovieDetailsFragment
 import kotlinx.coroutines.test.runTest
@@ -52,7 +52,8 @@ class MovieListFragmentTest {
         Movie(3,"title3","poster","year",
             "country","rating",null,null),
         Movie(4,"title4","poster","year",
-            "country","rating",null,null))
+            "country","rating",null,null)
+    )
 
     @Before
     fun setup() {

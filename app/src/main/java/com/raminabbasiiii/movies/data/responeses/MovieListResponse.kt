@@ -1,8 +1,6 @@
-package com.raminabbasiiii.movies.data.network.responses
+package com.raminabbasiiii.movies.data.responeses
 
 import com.google.gson.annotations.SerializedName
-import com.raminabbasiiii.movies.model.MetaData
-import com.raminabbasiiii.movies.data.network.MovieDto
 
 data class MovieListResponse(
     @SerializedName("data")

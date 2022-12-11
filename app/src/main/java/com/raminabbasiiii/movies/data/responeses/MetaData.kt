@@ -1,4 +1,4 @@
-package com.raminabbasiiii.movies.model
+package com.raminabbasiiii.movies.data.responeses
 
 import com.google.gson.annotations.SerializedName
 

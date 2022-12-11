@@ -9,7 +9,7 @@ import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.raminabbasiiii.movies.databinding.MovieItemBinding
-import com.raminabbasiiii.movies.model.Movie
+import com.raminabbasiiii.movies.domain.entities.Movie
 import com.raminabbasiiii.movies.util.MovieDiffCallback
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject

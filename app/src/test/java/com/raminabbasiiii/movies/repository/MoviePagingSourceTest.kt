@@ -3,11 +3,12 @@ package com.raminabbasiiii.movies.repository
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.paging.PagingSource
 import com.raminabbasiiii.movies.MainCoroutinesRule
+import com.raminabbasiiii.movies.data.data_source.MoviePagingSource
 import com.raminabbasiiii.movies.data.network.Api
 import com.raminabbasiiii.movies.data.network.MovieDto
-import com.raminabbasiiii.movies.data.network.responses.MovieListResponse
+import com.raminabbasiiii.movies.data.responeses.MovieListResponse
 import com.raminabbasiiii.movies.data.network.toMovie
-import com.raminabbasiiii.movies.model.MetaData
+import com.raminabbasiiii.movies.data.responeses.MetaData
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Before

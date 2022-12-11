@@ -1,4 +1,4 @@
-package com.raminabbasiiii.movies.model
+package com.raminabbasiiii.movies.domain.entities
 
 
 data class Movie(

@@ -13,7 +13,7 @@ import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import com.raminabbasiiii.movies.R
 import com.raminabbasiiii.movies.launchFragmentInHiltContainer
 import com.raminabbasiiii.movies.AndroidMainCoroutinesRule
-import com.raminabbasiiii.movies.model.MovieDetails
+import com.raminabbasiiii.movies.domain.entities.MovieDetails
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi

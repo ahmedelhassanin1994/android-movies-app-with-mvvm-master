@@ -4,8 +4,8 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.raminabbasiiii.movies.MainCoroutinesRule
 import com.raminabbasiiii.movies.getOrAwaitValueTest
-import com.raminabbasiiii.movies.model.MovieDetails
-import com.raminabbasiiii.movies.repository.MovieRepository
+import com.raminabbasiiii.movies.domain.entities.MovieDetails
+import com.raminabbasiiii.movies.domain.repository.Repository
 import com.raminabbasiiii.movies.util.Resource
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow
@@ -37,7 +37,7 @@ class MovieDetailsViewModelTest {
     lateinit var movieDetails: MovieDetails
 
     @Mock
-    lateinit var repository: MovieRepository
+    lateinit var repository: Repository
 
     @Mock
     lateinit var movieDetailsResponseObserver: Observer<Resource<MovieDetails>>
